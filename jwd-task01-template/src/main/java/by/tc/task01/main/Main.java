@@ -18,9 +18,14 @@ public class Main {
 		//////////////////////////////////////////////////////////////////
 
 		Criteria<Oven> criteriaOven = new Criteria<Oven>();
+		criteriaOven.setApplianceType("Oven");
 		criteriaOven.add(Oven.CAPACITY, 3);
 
 		appliance = service.find(criteriaOven);
+		
+		if(appliance.getClass() == by.tc.task01.entity.Oven.class) {}
+		by.tc.task01.entity.Oven oven = (by.tc.task01.entity.Oven) appliance;
+		//if(oven.getCapacity() == 3) {}
 
 		PrintApplianceInfo.print(appliance);
 
