@@ -4,24 +4,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Criteria<E> {
-	
-	private String applianceType;
 
-	private Map<E, Object> criteria = new HashMap<E, Object>();
+	private Map<E, Object> criteria = new HashMap<>();
+	private String criteriaType;
 
 	public void add(E searchCriteria, Object value) {
 		criteria.put(searchCriteria, value);
 	}
-
-	public String getApplianceType() {
-		return applianceType;
-	}
-
-	public void setApplianceType(String applianceType) {
-		this.applianceType = applianceType;
-	}
-		
 	
-	// you may add your own code here
+	public Map<E, Object> getCriteriaMap() {
+		return criteria;
+	}
+
+	public String getCriteriaType() {
+		return criteriaType;
+	}
+
+	public void setCriteriaType(String criteriaType) {
+		this.criteriaType = criteriaType;
+	}
 
 }

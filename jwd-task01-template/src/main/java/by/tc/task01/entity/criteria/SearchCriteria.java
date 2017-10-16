@@ -5,7 +5,7 @@ public final class SearchCriteria {
 	public static enum Oven{
 		POWER_CONSUMPTION, WEIGHT, CAPACITY, DEPTH, HEIGHT, WIDTH
 	}
-	
+
 	public static enum Laptop{
 		BATTERY_CAPACITY, OS, MEMORY_ROM, SYSTEM_MEMORY, CPU, DISPLAY_INCHES
 	}
