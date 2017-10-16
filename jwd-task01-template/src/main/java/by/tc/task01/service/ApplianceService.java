@@ -9,6 +9,10 @@ public class ApplianceService implements IApplianceService {
 
 	@Override
 	public <E> Appliance find(Criteria<E> criteria) {
+		if (criteria == null) {
+			return null;
+		}
+
 		if (criteria.getCriteriaMap().isEmpty()) {
 			return null;
 		}
